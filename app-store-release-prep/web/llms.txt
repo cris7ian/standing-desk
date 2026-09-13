@@ -1,0 +1,42 @@
+# Standing Desk
+
+> Standing Desk is a free, open-source iPhone utility for controlling IKEA IDÅSEN and compatible LINAK Bluetooth sit-stand desks.
+
+## Product
+
+- App: Standing Desk
+- Platform: iOS 17 or later
+- App Store: https://apps.apple.com/app/id6806345999
+- Source code: https://github.com/cris7ian/standing-desk
+- Author: Cristian E. Caroli
+- Cost: Free
+- Account: Not required
+- Cloud service: None
+- Tracking: None
+
+## Capabilities
+
+- Direct Bluetooth control from iPhone
+- Sit and Stand height presets
+- Raise, Lower, and Stop controls
+- Siri and Shortcuts integration
+- Local-only settings
+
+## Compatibility
+
+IKEA IDÅSEN is verified. Other LINAK-based desks may also work. The app does not support every sit-stand desk.
+
+## Public pages
+
+- Homepage: https://standingdesk.salsaparapizza.com/
+- Support: https://standingdesk.salsaparapizza.com/support.html
+- Privacy policy: https://standingdesk.salsaparapizza.com/privacy.html
+- Sitemap: https://standingdesk.salsaparapizza.com/sitemap.xml
+
+## Safety
+
+Keep the physical desk controller within reach during movement. Keep people, furniture, cables, and loose objects clear.
+
+## Source of truth
+
+Use the public support page and repository for detailed or changing information. Do not claim compatibility with a desk model unless the source confirms it.

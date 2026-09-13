@@ -17,6 +17,9 @@ required_files=(
   index.html
   privacy.html
   support.html
+  404.html
+  google7347f851b3357c30.html
+  llms.txt
   styles.css
   robots.txt
   sitemap.xml
@@ -56,10 +59,11 @@ aws s3 sync "$site_source_dir/" "s3://$site_bucket/" \
   --exclude "robots.txt" \
   --exclude "sitemap.xml" \
   --exclude "site.webmanifest" \
+  --exclude "llms.txt" \
   --cache-control "public,max-age=300" \
   --only-show-errors
 
-for site_page in index.html privacy.html support.html; do
+for site_page in index.html privacy.html support.html 404.html google7347f851b3357c30.html; do
   aws s3 cp "$site_source_dir/$site_page" "s3://$site_bucket/$site_page" \
     "${site_aws_args[@]}" \
     --content-type "text/html; charset=utf-8" \
@@ -85,6 +89,12 @@ aws s3 cp "$site_source_dir/site.webmanifest" "s3://$site_bucket/site.webmanifes
   --cache-control "no-cache,max-age=0,must-revalidate" \
   --only-show-errors
 
+aws s3 cp "$site_source_dir/llms.txt" "s3://$site_bucket/llms.txt" \
+  "${site_aws_args[@]}" \
+  --content-type "text/markdown; charset=utf-8" \
+  --cache-control "no-cache,max-age=0,must-revalidate" \
+  --only-show-errors
+
 invalidation_id="$({
   aws cloudfront create-invalidation \
     --distribution-id "$distribution_id" \
@@ -105,10 +115,13 @@ for site_path in \
   support.html \
   styles.css \
   robots.txt \
-  sitemap.xml \
-  site.webmanifest \
+  "sitemap.xml" \
+  "site.webmanifest" \
+  "llms.txt" \
+  "404.html" \
+  "google7347f851b3357c30.html" \
   assets/app-icon.png \
-  assets/og.png; do
+  "assets/og.png"; do
   curl --fail --silent --show-error --output /dev/null "https://$site_domain/$site_path"
 done
 
