@@ -10,7 +10,7 @@ Open `http://127.0.0.1:8765`.
 ## Effects
 
 `effects.js` adds spring-based pointer tilt and one-time section reveals.
-CSS adds the phone entrance, trail reveal, sparkle animation, underline shimmer, and button feedback.
+CSS adds the phone entrance, trail reveal, sparkle animation, underline shimmer, staggered waving “Wizard” letters, and button feedback.
 The website does not use Bluetooth, invoke native helpers, or send movement commands.
 
 Reduced motion disables decorative travel. Animations pause when hidden or outside the viewport.
