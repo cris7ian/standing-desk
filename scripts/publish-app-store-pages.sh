@@ -21,6 +21,7 @@ required_files=(
   google7347f851b3357c30.html
   llms.txt
   styles.css
+  effects.js
   robots.txt
   sitemap.xml
   site.webmanifest
@@ -114,6 +115,7 @@ for site_path in \
   privacy.html \
   support.html \
   styles.css \
+  effects.js \
   robots.txt \
   "sitemap.xml" \
   "site.webmanifest" \
