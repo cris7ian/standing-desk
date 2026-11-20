@@ -50,7 +50,9 @@ jobs:
       - name: Cache Xcode build artifacts
         uses: actions/cache@v6
         with:
-          path: .build/derived_data
+          path: |
+            .build/derived_data
+            !.build/derived_data/Logs
           key: ios-derived-v1-${{ runner.os }}-${{ hashFiles('ios/StandingDesk.xcodeproj/project.pbxproj', 'scripts/verify-ios.sh') }}
           restore-keys: ios-derived-v1-${{ runner.os }}-
 
