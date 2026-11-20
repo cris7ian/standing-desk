@@ -47,5 +47,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v7
 
+      - name: Cache Xcode build artifacts
+        uses: actions/cache@v6
+        with:
+          path: .build/derived_data
+          key: ios-derived-v1-${{ runner.os }}-${{ hashFiles('ios/StandingDesk.xcodeproj/project.pbxproj', 'scripts/verify-ios.sh') }}
+          restore-keys: ios-derived-v1-${{ runner.os }}-
+
       - name: Build and test iPhone app
         run: scripts/verify-ios.sh
